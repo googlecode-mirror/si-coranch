@@ -1,7 +1,6 @@
 <?php
 include "konek.php";
 
-
 @$nama_koperasi = $_POST['nama_koperasi'];
 @$email_koperasi = $_POST['email_koperasi'];
 @$alamat_koperasi = $_POST['alamat_koperasi'];
@@ -43,9 +42,6 @@ if(isset($_POST['simpan'])){
 			</script>
 			<?
 		}
-		
-		$panggil = new fungsi;
-		$panggil -> draft();
 	}
 
 ?>

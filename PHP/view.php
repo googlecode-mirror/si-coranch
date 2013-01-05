@@ -1,7 +1,8 @@
 <?php
 //session_start();
 include "konek.php";
-//include "page.php";		
+//include "page.php";	
+//upload kembali file view.php karena kesalahan 	
 function ubah_tgl($coba){
 	$exp = explode('-',$coba);
 	if(count($exp) == 3) {

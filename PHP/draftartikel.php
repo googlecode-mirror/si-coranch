@@ -1,6 +1,7 @@
 <?
 include "konek.php";
 ?>
+//upload kembali file draftartikel.php karena kesalahan
 <html>
 <head>
 	<meta charset="utf-8">

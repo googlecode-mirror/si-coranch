@@ -1,7 +1,8 @@
 <?
+session_start();
 include "konek.php";
+include"page.php";
 ?>
-//upload kembali file postartikel.php karena kesalahan
 <html>
 <head>
 	<meta charset="utf-8">
@@ -81,6 +82,13 @@ include "konek.php";
 					<li>
 						<a>Diterbitkan</a>
 					</li>
+					
+					<form class="navbar-form pull-right" action="cari_artikel_admin.php" method="post" name="cari">
+                    	<input id="cari" name="cari" class="input" type="text" placeholder="cari judul artikel" >
+						
+						<button class="btn btn-primary" type="submit" name="submit" id="submit" value="cari">Cari</button>
+                        </form>
+					
 				</ul>
 			</div>
 

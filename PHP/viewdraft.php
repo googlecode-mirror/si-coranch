@@ -1,8 +1,7 @@
 <?php
 //session_start();
 include "konek.php";
-//include "page.php";	
-//upload kembali file viewdraft.php karena kesalahan	
+include "page.php";		
 function ubah_tgl($coba){
 	$exp = explode('-',$coba);
 	if(count($exp) == 3) {
@@ -31,7 +30,11 @@ function ubah_tgl($coba){
 					echo "<td>".$data['judul_artikel']."</td>";
 					//echo "<td>".$data['deskripsi_artikel']."</td>";
 					
-					echo "<td><form method='post'><input type='submit' name='del' value='delete' /><input type='hidden' name='hid' value=".$data['id_artikel']."><input type='submit' name='edit' value='Edit' /><input type='hidden' name='hid' value=".$data['id_artikel'].">
+					echo "<td><form method='post'><input class= 'btn btn-medium' type='submit' name='del' value='hapus' /><input type='hidden' name='hid' value=".$data['id_artikel'].">
+					
+					<a class='btn btn-medium' href='formedit.php?id=".$data['id_artikel']."'>
+						<span class='hidden-phone'> Edit</span>
+					</a>
 					</form></td>";
 					
 					//echo "<td><form method='post'></form></td>";

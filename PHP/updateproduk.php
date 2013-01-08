@@ -12,7 +12,7 @@ $deskripsi_produk = $_POST['deskripsi_produk'];
 $produk = null;
 $set = true;
 
-if(isset($_POST['nama']) && isset($_POST['harga'])){
+if(isset($_POST['nama_produk']) && isset($_POST['harga_produk'])){
 	if ((($_FILES["produk"]["type"] == "image/jpeg")|| ($_FILES["produk"]["type"] == "image/png")|| ($_FILES["produk"]["type"] == "image/jpeg"))&& ($_FILES["produk"]["size"] < 20000000)) {
 		if($_FILES["produk"]["error"] > 0) {
 			echo '<div class="alert alert-danger">Error<button class="close" data-dismiss="alert">&times;</button></div>';

@@ -1,3 +1,8 @@
+<?
+session_start();
+include"konek.php";
+include"page.php";
+?>
 <html>
 <head>
 	<meta charset="utf-8">

@@ -1,5 +1,7 @@
 <?php 
+session_start();
 include "konek.php";
+include"page.php";
 
 $edit = mysql_query("SELECT * FROM artikel WHERE id_artikel='$_GET[id_artikel]'");
 $a = mysql_fetch_array($edit);

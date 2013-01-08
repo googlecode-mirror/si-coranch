@@ -1,5 +1,7 @@
 <?php
+session_start();
 include "konek.php";
+include"page.php";
 $sql="SELECT * FROM artikel WHERE id_artikel=".$_GET['id'];
 $edit = mysql_query($sql);
 $a = mysql_fetch_array($edit);
@@ -78,7 +80,7 @@ $a = mysql_fetch_array($edit);
 						<a href="daftarartikel.php">Artikel</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a>Tambah Artikel</a>
+						<a>Edit Artikel</a>
 					</li>
 					
 				</ul>
@@ -87,7 +89,7 @@ $a = mysql_fetch_array($edit);
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="breadcrumb">
-						<h2><i class="icon-picture"></i>Tambah Artikel</h2>
+						<h2><i class="icon-picture"></i>Edit Artikel</h2>
 					</div>
 					<div class="box-content">
 						<div class="container-fluid">

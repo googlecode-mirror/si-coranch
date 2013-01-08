@@ -3,7 +3,7 @@
 include "konek.php";
 //include "page.php";		
 
-				$batas = 9;
+				$batas = 5;
 				if(isset($_GET['halaman'])) {
 				$halaman = $_GET['halaman'];
 				$posisi = ($halaman - 1) * $batas;
@@ -16,6 +16,13 @@ include "konek.php";
 				$ada= mysql_query("SELECT*FROM produk where id_koperasi=".$_SESSION['id_koperasi']." LIMIT $posisi, $batas");
 				while($data= mysql_fetch_array($ada)){
 				echo "<tr>";
+				
+					if ($data["produk"] != "") {
+						echo '<td class="dl-horizontal"><img src="'.$data["produk"].'" class="img-rounded" style="max-height:70px;max-width:70px;"></td>'; 
+					}else{
+						echo '<td><img src="img/produk.png" class="img-rounded" style="max-height:70px;max-width:70px;"></td>';
+					}
+					
 					echo "<td>".$data['nama_produk']."</td>";
 					echo "<td>".$data['harga_produk']."</td>";
 					echo "<td>".$data['kategori_produk']."</td>";
@@ -41,7 +48,7 @@ include "konek.php";
 					$counter = "++";				
 				}
 				
-				$tampil2 = mysql_query("SELECT * FROM produk");
+				$tampil2 = mysql_query("SELECT * FROM produk where id_koperasi=".$_SESSION['id_koperasi']);
 				$jmlData = mysql_num_rows($tampil2);
 				$jmlHal = ceil($jmlData/$batas);
 				

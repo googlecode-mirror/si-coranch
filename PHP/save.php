@@ -1,5 +1,7 @@
 <?php
+session_start();
 include "konek.php";
+include"page.php";
 
 
 @$judul_artikel = $_POST['judul_artikel'];

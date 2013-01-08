@@ -1,7 +1,7 @@
 <?php
 //session_start();
 include "konek.php";
-//include "page.php";		
+include "page.php";		
 
 				$batas = 9;
 				if(isset($_GET['halaman'])) {
@@ -30,6 +30,7 @@ include "konek.php";
 					if(isset($_POST['del'])){
 						$id=$_POST['hid'];				
 						$query = mysql_query("DELETE FROM koperasi where id_koperasi = ".$id);
+						$query = mysql_query("DELETE FROM produk where id_koperasi = ".$id);
 						header('Location:koperasi.php');
 					}
 					$counter = "++";				

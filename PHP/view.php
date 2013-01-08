@@ -1,8 +1,7 @@
 <?php
 //session_start();
 include "konek.php";
-//include "page.php";	
-//upload kembali file view.php karena kesalahan 	
+include "page.php";		
 function ubah_tgl($coba){
 	$exp = explode('-',$coba);
 	if(count($exp) == 3) {
@@ -33,16 +32,15 @@ function ubah_tgl($coba){
 					//echo "<td>".$data['deskripsi_artikel']."</td>";
 					
 					echo "<td><form method='post'><input class= 'btn btn-medium' type='submit' name='del' value='hapus' /><input type='hidden' name='hid' value=".$data['id_artikel'].">
-					<a href='formedit.php?id=".$data['id_artikel']."'>Edit</a>
+					
+					<a class='btn btn-medium' href='formedit.php?id=".$data['id_artikel']."'>
+						<span class='hidden-phone'> Edit</span>
+					</a>
 					</form></td>";
 					
 					//echo "<td><form method='post'></form></td>";
 					echo "</tr>";
-					
-					
-					if(isset($_POST['edit'])){
-					header('Location:act_edit.php');
-					}
+
 					
 					if(isset($_POST['del'])){
 						$id=$_POST['hid'];				

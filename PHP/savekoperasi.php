@@ -1,12 +1,15 @@
 <?php
+session_start();
 include "konek.php";
+include"page.php";
+
 
 @$nama_koperasi = $_POST['nama_koperasi'];
 @$email_koperasi = $_POST['email_koperasi'];
 @$alamat_koperasi = $_POST['alamat_koperasi'];
 @$kecamatan_koperasi = $_POST['kecamatan_koperasi'];
-@$username_koperasi = $_POST['username_koperasi'];
-@$pass_koperasi = $_POST['pass_koperasi'];
+@$username = $_POST['username'];
+@$pass = $_POST['pass'];
 @$deskripsi_koperasi = $_POST['deskripsi_koperasi'];
 @$kontak_koperasi = $_POST['kontak_koperasi'];
 $logo = null;
@@ -33,7 +36,7 @@ if(isset($_POST['simpan'])){
 
 
 	if(isset ($_POST['simpan'])) {
-		$sql = mysql_query("INSERT INTO koperasi VALUES('','$nama_koperasi','$email_koperasi', '$alamat_koperasi', '$kecamatan_koperasi', '$username_koperasi', '$pass_koperasi', '$deskripsi_koperasi','$kontak_koperasi', '$logo')");
+		$sql = mysql_query("INSERT INTO koperasi VALUES('','$nama_koperasi','$email_koperasi', '$alamat_koperasi', '$kecamatan_koperasi', '$username', '$pass', '$deskripsi_koperasi','$kontak_koperasi', '$logo')");
 		if($sql){
 			?>
 			<script language = "JavaScript">
@@ -42,6 +45,7 @@ if(isset($_POST['simpan'])){
 			</script>
 			<?
 		}
+
 	}
 
 ?>

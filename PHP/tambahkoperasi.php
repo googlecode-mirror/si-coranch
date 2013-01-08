@@ -1,5 +1,7 @@
 <?
+session_start();
 include "konek.php";
+include"page.php";
 ?>
 <html>
 <head>
@@ -115,7 +117,7 @@ include "konek.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="username_koperasi" name="username_koperasi" id="username_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="username" name="username" id="username" autofocus="autofocus" required="required">
 										</div>
 									</td>
 								</tr>
@@ -143,7 +145,7 @@ include "konek.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="password" name="pass_koperasi" id="pass_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="password" name="pass" id="pass" autofocus="autofocus" required="required">
 										</div>
 									</td>
 								</tr>

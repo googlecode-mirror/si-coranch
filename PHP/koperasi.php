@@ -1,5 +1,7 @@
 <?
+session_start();
 include "konek.php";
+include"page.php";
 ?>
 <html>
 <head>
@@ -72,6 +74,13 @@ include "konek.php";
 					<li>
 						<a>Koperasi</a>
 					</li>
+					
+					<form class="navbar-form pull-right" action="cari_koperasi.php" method="post" name="cari">
+                    	<input id="cari" name="cari" class="input" type="text" placeholder="cari akun koperasi" >
+						
+						<button class="btn btn-primary" type="submit" name="submit" id="submit" value="cari">Cari</button>
+                        </form>
+					
 				</ul>
 			</div>
 			

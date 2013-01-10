@@ -67,7 +67,22 @@ while($akun1= mysql_fetch_array($akun)){
 				</ul>
 			</div>
 			
-			<div id="content" class="span10">			
+			<div id="content" class="span10">
+			<?php
+				if (!empty($_GET['message']) && $_GET['message'] == 'success') {
+					echo '<div class="alert alert-success">Produk Berhasil Ditambahkan!!
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+				
+				if (!empty($_GET['message']) && $_GET['message'] == 'warning') {
+					echo '<div class="alert alert-error">Data Batal Ditambahkan
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+			?>			
 			<div class="row-fluid sortable">
 				<div class="box span12">
 				<div class="breadcrumb">

@@ -1,6 +1,5 @@
 <?php 
 class Produk{
-
 	var $host;
 	var $user;
 	var $pass;
@@ -20,14 +19,9 @@ class Produk{
 	}
 	
 	function simpan_produk($data){
-	
 		$this->_connect();
-	
 		$sql = "
-		INSERT 
-		INTO 
-		produk 
-		VALUES
+		INSERT INTO produk VALUES
 		(
 		'',
 		'".$data['id_koperasi']."',

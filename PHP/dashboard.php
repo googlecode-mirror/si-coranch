@@ -71,35 +71,6 @@ include"page.php";
 			
 			<div class="row-fluid sortable">
 			
-				<div class="box span12">
-					<div class="breadcrumb">
-						<h2><i class="icon-picture"></i>Koperasi
-						<div class="btn-group pull-right" >
-							<a class="btn btn-medium btn-primary" href="tambahkoperasi.php">
-							<i class="icon-pencil"></i><span class="hidden-phone"> Tambah Koperasi</span>
-							</a>	
-						</div>
-						</h2>
-					</div>
-					<div class="container-fluid">
-						<div class="row-fluid">
-							<div class="span12">
-								<table class="table table-striped" align="center" action="viewkoperasi_dashboard.php">
-									<thead>
-									<tr>
-										<th>Foto Koperasi</th>
-										<th>Kecamatan Koperasi</th>	
-										<th>Kecamatan Koperasi</th>	
-										<th>Kecamatan Koperasi</th>	
-									</tr>
-									<?include "viewkoperasi_dashboard.php";?>
-									</thead>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			
 				<div class="box span6">
 					<div class="breadcrumb">
 						<h2><i class="icon-picture"></i>Shortcut Tambah Artikel</h2>
@@ -183,7 +154,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="username_koperasi" name="username_koperasi" id="username_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="username" name="username" id="username"  required="required">
 										</div>
 									</td>
 								</tr>
@@ -197,7 +168,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="email_koperasi" name="email_koperasi" id="email_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="email_koperasi" name="email_koperasi" id="email_koperasi"  required="required">
 										</div>
 									</td>
 								</tr>
@@ -211,7 +182,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="password" name="pass_koperasi" id="pass_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="password" name="pass" id="pass"  required="required">
 										</div>
 									</td>
 								</tr>
@@ -225,7 +196,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="alamat_koperasi" name="alamat_koperasi" id="alamat_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="alamat_koperasi" name="alamat_koperasi" id="alamat_koperasi" required="required">
 										</div>
 									</td>
 								</tr>
@@ -285,7 +256,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="kontak_koperasi" name="kontak_koperasi" id="kontak_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="kontak_koperasi" name="kontak_koperasi" id="kontak_koperasi" required="required">
 										</div>
 									</td>
 								</tr>								

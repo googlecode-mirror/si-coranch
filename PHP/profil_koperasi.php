@@ -49,7 +49,7 @@ while($data= mysql_fetch_array($ada)){
 						
 						<li><a href="profil_koperasi.php"><i class="icon-user"></i><span class="hidden-tablet"> Profil 
 						<ul><a class="" href="edit_koperasi.php".$data['id_koperasi'].><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Profil </span></a></ul>
-						<ul><a class="" href="edit_koperasi.php"><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Password </span></a></ul>
+						<ul><a class="" href="ubah_password_koperasi.php"><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Password </span></a></ul>
 						</span></a>
 						</li>
 						
@@ -69,6 +69,21 @@ while($data= mysql_fetch_array($ada)){
 			</div>
 			
 			<div id="content" class="span10">
+			<?php
+				if (!empty($_GET['message']) && $_GET['message'] == 'success') {
+					echo '<div class="alert alert-success">Password Berhasil Diubah
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+				
+				if (!empty($_GET['message']) && $_GET['message'] == 'warning') {
+					echo '<div class="alert alert-error">Perubahan Password Dibatalkan!!
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+			?>
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="breadcrumb">
@@ -78,14 +93,14 @@ while($data= mysql_fetch_array($ada)){
 					<div class="box-content">
 						<div class="container-fluid">
 							<div class="row-fluid">
-							<div class="span3">
+							<div class="span2">
 							<?
 							echo '<td class="dl-horizontal">';
 							if ($data["logo"] != "") echo '<dt><img src="'.$data["logo"].'" class="img-rounded" style="max-height:200px;max-width:200px;"></dt>'; 
 							else echo '<td><img src="img/koperasi.png" class="img-rounded" style="max-height:200px;max-width:200px;"></td>';
 							?>
 							</div>
-								<div class="span9">
+								<div class="span10">
 								<form name="input" method="post" enctype="multipart/form-data" align="center">
 								<table>
 								<thead>
@@ -133,7 +148,7 @@ while($data= mysql_fetch_array($ada)){
 
 								<tr>
 									<td>
-										<div align="left">Alamat Koperasi</div>
+										<div align="left">Alamat </div>
 									</td>
 									<td>
 										<span align="left">:</span>
@@ -147,7 +162,7 @@ while($data= mysql_fetch_array($ada)){
 
 								<tr>
 									<td>
-										<div align="left">Kecamatan Koperasi</div>
+										<div align="left">Kecamatan</div>
 									</td>
 									<td>
 										<span align="left">:</span>
@@ -160,7 +175,7 @@ while($data= mysql_fetch_array($ada)){
 
 								<tr>
 									<td>
-										<div align="left">Deskripsi Koperasi</div>
+										<div align="left">Deskripsi </div>
 									</td>
 									<td>
 										<span align="left">:</span>
@@ -174,7 +189,7 @@ while($data= mysql_fetch_array($ada)){
 								
 								<tr>
 									<td>
-										<div align="left">No. Telphone Koperasi</div>
+										<div align="left">No. Telphone </div>
 									</td>
 									<td>
 										<span align="left">:</span>

@@ -1,7 +1,8 @@
 <?
+session_start();
 include "konek.php";
+include"page.php";
 ?>
-//upload kembali file daftarartikel.php karena kesalahan
 <html>
 <head>
 	<meta charset="utf-8">
@@ -24,11 +25,7 @@ include "konek.php";
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
+				
 				<a class="brand" href="index.html"> <img alt="SI-Coranch Logo" src="img/Favicon.png" /> <span>SI-Coranch</span></a>				
 				<div class="btn-group pull-right" >
 					<a class="btn btn-medium" href="logout.php">
@@ -38,7 +35,7 @@ include "konek.php";
 				
 				<div class="top-nav nav-collapse">
 					<ul class="nav">
-						<li><a href="#">Visit Site</a></li>
+						<li><a href="index.php">Visit Site</a></li>
 					</ul>
 				</div>
 			</div>
@@ -69,20 +66,37 @@ include "konek.php";
 			</div>
 
 			
-			<div id="content" class="span10">			
-			<div>
-				<ul class="breadcrumb">
+			<div id="content" class="span10">	
+			<?php
+				if (!empty($_GET['message']) && $_GET['message'] == 'success') {
+					echo '<div class="alert alert-success">Artikel Berhasil Ditambahkan!!
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+				if (!empty($_GET['message']) && $_GET['message'] == 'successdraft') {
+					echo '<div class="alert alert-success">Artikel disimpan sebagai draft!!
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+				
+			?>
+                <ul class="breadcrumb"> 
 					<li>
 						<a href="dashboard.php">Dashboard </a> <span class="divider">/</span>
 					</li>
 					<li>
 						<a>Artikel</a>
 					</li>
+                     <form class="navbar-form pull-right" action="cari_artikel_admin.php" method="post" name="cari">
+                    	<input id="cari" name="cari" class="input" type="text" placeholder="cari judul artikel" >
+						
+						<button class="btn btn-primary" type="submit" name="submit" id="submit" value="cari">Cari</button>
+                        </form>
 				</ul>
 			</div>
-
-			<div class="row-fluid sortable">
-				<div class="box span12">
+				<div class="box span10">
 					<div class="breadcrumb">
 						<h2><i class="icon-picture"></i>Artikel
 						<div class="btn-group pull-right" >
@@ -110,7 +124,7 @@ include "konek.php";
 						</div>
 					</div>
 				</div>
-			</div>
+		  </div>
 			</div>
 		</div>
 	</div>

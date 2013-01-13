@@ -37,7 +37,6 @@ while($akun1= mysql_fetch_array($akun)){
 			</div>
 		</div>
 	</div>
-
 		<div class="container-fluid">
 		<div class="row-fluid">
 
@@ -110,6 +109,19 @@ while($akun1= mysql_fetch_array($akun)){
 										<div class="input-prepend">
 												<input class="input-large" type="harga_produk" name="harga_produk" id="harga_produk"  required="required">
 										</div>
+										<div>
+											<h6><?echo"Contoh:10000";?></h6>
+										</div>
+										<?php
+											if (!empty($_GET['message']) && $_GET['message'] == 'warning') {
+												echo '<div class="alert alert-error">
+												penulisan harga tidak sesuai
+													<button class="close" data-dismiss="alert">&times;
+													</button>
+												</div>';
+												
+											}
+										?>	
 									</td>
 								</tr>
 								
@@ -174,11 +186,12 @@ while($akun1= mysql_fetch_array($akun)){
 								
 								</thead>
 								</table>
-									<form>			
+												
 										<input class="btn btn-medium btn-primary" input name="simpan" type="submit" id="simpan" value="Simpan">
-									<input class="btn btn-medium" type="reset" value="Reset">
+										
+										<input class="btn btn-medium" input name="batal" type="submit" id="batal" onClick="location:viewproduk.php?message=warning" value="Batal">
 									
-									</form>
+									
 								</form>
 								
 								</div>	

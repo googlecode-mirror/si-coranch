@@ -30,7 +30,7 @@ include"page.php";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"> <img alt="SI-Coranch Logo" src="img/Favicon.png" /> <span>SI-Coranch</span></a>				
+				<a class="brand" href="index.php"> <img alt="SI-Coranch Logo" src="img/Favicon.png" /> <span>SI-Coranch</span></a>				
 				<div class="btn-group pull-right" >
 					<a class="btn btn-medium" href="logout.php">
 						<i class="icon-user"></i><span class="hidden-phone"> Logout</span>
@@ -39,7 +39,7 @@ include"page.php";
 				
 				<div class="top-nav nav-collapse">
 					<ul class="nav">
-						<li><a href="#">Visit Site</a></li>
+						<li><a href="index.php">Visit Site</a></li>
 					</ul>
 				</div>
 			</div>
@@ -59,13 +59,13 @@ include"page.php";
 						
 						<li><a href="profil.php"><i class="icon-user"></i><span class="hidden-tablet"> Profil 
 						<ul><a class="" href="edit_profil.php".$data['id_koperasi'].><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Profil </span></a></ul>
-						<ul><a class="" href=""><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Password </span></a></ul>
+						<ul><a class="" href="ubah_password_admin.php"><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Password </span></a></ul>
 						</span></a>
 						</li>
 					</ul>
 				</div>
 			</div>
-			<div id="content" class="span10">			
+			<div id="content" class="span10">
 			<div>
 				<ul class="breadcrumb">
 					<li>
@@ -76,6 +76,21 @@ include"page.php";
 					</li>
 				</ul>
 			</div>
+			<?php
+				if (!empty($_GET['message']) && $_GET['message'] == 'success') {
+					echo '<div class="alert alert-success">Password Berhasil Diubah!!
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+				
+				if (!empty($_GET['message']) && $_GET['message'] == 'warning') {
+					echo '<div class="alert alert-error">Password gagal diubah
+					<button class="close" data-dismiss="alert">&times;
+					</button>
+					</div>';
+				}
+			?>
 			
 						<div class="row-fluid sortable">
 				<div class="box span12">

@@ -7,7 +7,7 @@ if (isset($_SESSION['pass']) && isset($_SESSION['username'])){
 else{
 	?><script language="javascript">
 	//alert("Maaf, Anda tidak berhak mengakses halaman ini!!");
-	document.location="login2.php";
+	document.location="index.php";
 	</script>
 	<?
 }	

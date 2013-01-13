@@ -30,7 +30,7 @@ if(isset($_POST['judul']) && isset($_POST['deskripsi'])){
 }
 
 if( $_FILES["picture"]["name"] == ''){
-	$sql = "UPDATE artikel SET judul_artikel='$judul_artikel', deskripsi_artikel='$deskripsi_artikel' WHERE id_artikel=$id_artikel";
+	$sql = "UPDATE artikel SET judul_artikel='$judul_artikel',deskripsi_artikel='$deskripsi_artikel' WHERE id_artikel=$id_artikel";
 	
 	$b = mysql_query($sql) or die(mysql_error());
 }else{

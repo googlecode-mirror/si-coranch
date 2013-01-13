@@ -41,7 +41,7 @@ if(isset($_POST['simpan'])){
 			?>
 			<script language = "JavaScript">
 			document.location='koperasi.php';
-			alert('task successfully saved^^');
+			alert('Akun Koperasi Berhasil ditambahkan');
 			</script>
 			<?
 		}

@@ -59,7 +59,7 @@ include"page.php";
 						
 						<li><a href="profil.php"><i class="icon-user"></i><span class="hidden-tablet"> Profil 
 						<ul><a class="" href="edit_profil.php".$data['id_koperasi'].><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Profil </span></a></ul>
-						<ul><a class="" href=""><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Password </span></a></ul>
+						<ul><a class="" href="ubah_password_admin.php"><i class="icon-Pencil"></i><span class="hidden-tablet" role = "treeitem"> Ubah Password </span></a></ul>
 						</span></a>
 						</li>
 						

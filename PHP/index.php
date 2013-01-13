@@ -50,7 +50,7 @@ include "konek.php";
 				<div id="content" class="span12">
                	  <div class="breadcrumb" style="height:33px">
 					<center><form class="form-search" action="hasilpencarian.php" method="post" name="cari">
-                    	<input id="cari" name="cari" class="input-xxlarge" type="text" placeholder="cari nama produk" style="height:30px; width:1078px">
+                    	<input id="cari" name="cari" class="input-xxlarge" type="text" placeholder="Cari Produk" style="height:30px; width:1078px">
 						
 						<button class="btn" type="submit" name="submit" id="submit" value="cari">Cari</button>
                         </form></center>
@@ -89,6 +89,18 @@ include "konek.php";
 				</ul>
                 </div>
                 
+                <!--cari Artikel-->
+				
+				<div id="content" class="span11">
+               	  <div class="breadcrumb" style="height:33px">
+					<center><form class="form-search" action="hasilpencarian_artikel.php" method="post" name="cari">
+                    	<input id="cari" name="cari" class="input-xxlarge" type="text" placeholder="Cari Artikel" style="height:30px; width:1078px">
+						
+						<button class="btn" type="submit" name="submit" id="submit" value="cari">Cari</button>
+                        </form></center>
+					</div>
+				</div>
+				
                 <!--Artikel-->
                 <div id="content" class="span11">
 					<div class="breadcrumb">
@@ -97,11 +109,10 @@ include "konek.php";
                     
                    	<ul class="thumbnails">
 					<div class="span3">
-						<a href="#" class="carousel">
-						<img src="Background/Background1.jpg" style="width:250px; height:170px" alt="">
+						<a href="tampil_artikel.php?id=43" class="carousel">
+						<img src="picture/OWRH2oUSPl.jpg" style="width:250px; height:170px" alt="">
                         <div class="carousel-caption">
-                        	<h4 style="color:#FFF"><center>Artikel 1</center></h4>
-                            <p><center style="color:#FFF">iyeeesss</center></p>
+                        	<h4 style="color:#FFF"><center>Kemilau Nuklir di Bisnis Peternakan Sapi</center></h4>
                         </div>
 						</a>
 					</div>

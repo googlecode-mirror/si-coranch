@@ -23,16 +23,16 @@ include "konek.php";
 						echo '<td><img src="img/produk.png" class="img-rounded" style="max-height:100px;max-width:100px;"></td>';
 					}
 					
-					echo "<td class='pull-left'> <a href='detil_produk.php?=id=".$data['id_produk']."'><h2>".$data['nama_produk']."</h2></a>Rp.
-					<ul>".$data['harga_produk']."</ul>
+					echo "<td class='pull-left'> 
+					
+						<a href='detil_produk.php?id=".$data['id_produk']."'>
+							<h2>".$data['nama_produk']."</h2>
+						</a>
+						Rp.
+							<ul>".$data['harga_produk']."</ul>
 					</td>";
 				echo "</tr>";
 					
-					if(isset($_POST['del'])){
-						$id=$_POST['hid'];				
-						$query = mysql_query("DELETE FROM produk where id_produk= ".$id);
-						header('Location:viewproduk.php');
-					}
 					$counter = "++";				
 				}
 				

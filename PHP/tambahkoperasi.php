@@ -117,7 +117,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="username" name="username" id="username" autofocus="autofocus" required="required">
+												<input class="input-large" type="username" name="username" id="username"  required="required">
 										</div>
 									</td>
 								</tr>
@@ -131,7 +131,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="email_koperasi" name="email_koperasi" id="email_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="email_koperasi" name="email_koperasi" id="email_koperasi"  required="required">
 										</div>
 									</td>
 								</tr>
@@ -145,7 +145,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="password" name="pass" id="pass" autofocus="autofocus" required="required">
+												<input class="input-large" type="password" name="pass" id="pass"  required="required">
 										</div>
 									</td>
 								</tr>
@@ -159,7 +159,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="alamat_koperasi" name="alamat_koperasi" id="alamat_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="alamat_koperasi" name="alamat_koperasi" id="alamat_koperasi"  required="required">
 										</div>
 									</td>
 								</tr>
@@ -219,7 +219,7 @@ include"page.php";
 									</td>
 									<td>
 										<div class="input-prepend">
-												<input class="input-large" type="kontak_koperasi" name="kontak_koperasi" id="kontak_koperasi" autofocus="autofocus" required="required">
+												<input class="input-large" type="kontak_koperasi" name="kontak_koperasi" id="kontak_koperasi"  required="required">
 										</div>
 									</td>
 								</tr>								

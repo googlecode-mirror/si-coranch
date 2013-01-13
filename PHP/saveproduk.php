@@ -1,18 +1,25 @@
 <?php
 session_start();
-include"konek.php";
+$host = 'localhost';
+$user = 'root';
+$pass = '';
+$dbnm = 'sicoranch';
+
+include"produk.php";
 include"page_koperasi.php";
+$db = new Produk($host,$user,$pass,$dbnm);
 
-
-@$nama_produk = $_POST['nama_produk'];
-@$harga_produk = $_POST['harga_produk'];
-@$kategori_produk = $_POST['kategori_produk'];
-@$status_produk = $_POST['status_produk'];
-@$deskripsi_produk = $_POST['deskripsi_produk'];
+$nama_produk = $_POST['nama_produk'];
+$harga_produk = $_POST['harga_produk'];
+$kategori_produk = $_POST['kategori_produk'];
+$status_produk = $_POST['status_produk'];
+$deskripsi_produk = $_POST['deskripsi_produk'];
 $produk = null;
+$id_koperasi = $_SESSION['id_koperasi'];
 $set = true;
+
 if(isset($_POST['simpan'])){
-	if ((($_FILES["produk"]["type"] == "image/jpeg")|| ($_FILES["produk"]["type"] == "image/png")|| ($_FILES["produk"]["type"] == "image/jpeg"))&& ($_FILES["produk"]["size"] < 20000000)) {
+	if ((($_FILES["produk"]["type"] == "image/jpeg")|| ($_FILES["produk"]["type"] == "image/png")|| ($_FILES["produk"]["type"] == "image/jpg"))&& ($_FILES["produk"]["size"] < 20000000)) {
 		if($_FILES["produk"]["error"] > 0) {
 			echo '<div class="alert alert-danger">Error<button class="close" data-dismiss="alert">&times;</button></div>';
 			$set = false;
@@ -29,19 +36,23 @@ if(isset($_POST['simpan'])){
 			}
 		}
 	}
-}
-
-
-	if(isset ($_POST['simpan'])) {
-		$sql = mysql_query("INSERT INTO produk VALUES('',".$_SESSION['id_koperasi'].", '$nama_produk', '$harga_produk', '$kategori_produk', '$status_produk', '$deskripsi_produk', '$produk')");
-		if($sql){
-			?>
-			<script language = "JavaScript">
-			document.location='tmbhproduk.php';
-			alert('task successfully saved^^');
-			</script>
-			<?
+	
+	$data = array(
+			'id_koperasi' => $id_koperasi,
+			'nama_produk' => $nama_produk,
+			'harga_produk' => $harga_produk,
+			'kategori_produk' => $kategori_produk,
+			'status_produk' => $status_produk,
+			'deskripsi_produk' => $deskripsi_produk,
+			'produk' => $produk
+		);
+	$db -> simpan_produk($data);
+	}
+	if($db){
+			header('location:viewproduk.php?message=success');
 		}
+	if(isset ($_POST['batal'])) {
+			header('location:viewproduk.php?message=warning');
 	}
 
 ?>

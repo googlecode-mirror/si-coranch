@@ -30,7 +30,7 @@ include"page.php";
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"> <img alt="SI-Coranch Logo" src="img/Favicon.png" /> <span>SI-Coranch</span></a>				
+				<a class="brand" href="index.php"> <img alt="SI-Coranch Logo" src="img/Favicon.png" /> <span>SI-Coranch</span></a>				
 				<div class="btn-group pull-right" >
 					<a class="btn btn-medium" href="logout.php">
 						<i class="icon-user"></i><span class="hidden-phone"> Logout</span>
@@ -39,7 +39,7 @@ include"page.php";
 				
 				<div class="top-nav nav-collapse">
 					<ul class="nav">
-						<li><a href="#">Visit Site</a></li>
+						<li><a href="index.php">Visit Site</a></li>
 					</ul>
 				</div>
 			</div>
@@ -65,7 +65,7 @@ include"page.php";
 					</ul>
 				</div>
 			</div>
-			<div id="content" class="span10">			
+			<div id="content" class="span10">	
 			<div>
 				<ul class="breadcrumb">
 					<li>

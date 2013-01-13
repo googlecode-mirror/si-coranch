@@ -40,7 +40,7 @@ if( $_FILES["logo"]["name"] == ''){
 	email_koperasi='".$email_koperasi."', 
 	alamat_koperasi='".$alamat_koperasi."', 
 	kecamatan_koperasi='".$kecamatan_koperasi."', 
-	username='".$username."', 
+	
 	
 	deskripsi_koperasi='".$deskripsi_koperasi."', 
 	kontak_koperasi='".$kontak_koperasi."' 
@@ -53,8 +53,7 @@ if( $_FILES["logo"]["name"] == ''){
 	email_koperasi='".$email_koperasi."', 
 	alamat_koperasi='".$alamat_koperasi."', 
 	kecamatan_koperasi='".$kecamatan_koperasi."', 
-	username='".$username."', 
-	
+
 	deskripsi_koperasi='".$deskripsi_koperasi."', 
 	kontak_koperasi='".$kontak_koperasi."', 
 	logo='".$logo."'

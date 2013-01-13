@@ -106,20 +106,7 @@ while($a= mysql_fetch_array($ada)){
 									</td>
 								</tr>
 								
-								<tr>
-									<td>
-										<div align="left">Username Koperasi</div>
-									</td>
-									<td>
-										<span align="left">:   </span>
-									</td>
-									<td>
-										<div class="input-prepend">
-												<input class="input-large" type="username" name="username" id="username" value="<?php echo $a['username']; ?>" required="required">
-										</div>
-									</td>
-								</tr>
-									
+								
 								<tr>
 									<td>
 										<div align="left">Email Koperasi</div>

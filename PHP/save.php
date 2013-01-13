@@ -31,12 +31,7 @@ if(isset($_POST['terbit'])){
 		if(!empty($judul_artikel)) {
 		$sql = mysql_query("INSERT INTO artikel VALUES('','$judul_artikel','$deskripsi_artikel', 1 ,now(),'$picture')");
 		if($sql){
-			?>
-			<script language = "JavaScript">
-			document.location='daftarartikel.php';
-			alert('task successfully saved^^');
-			</script>
-			<?
+			header('location:daftarartikel.php?message=success');
 		}
 	}
 	}
@@ -70,12 +65,7 @@ if(isset($_POST['draft'])){
 		if(!empty($judul_artikel)) {
 		$sql = mysql_query("INSERT INTO artikel VALUES('','$judul_artikel','$deskripsi_artikel', 2 ,now(),'$picture')");
 		if($sql){
-			?>
-			<script language = "JavaScript">
-			document.location='daftarartikel.php';
-			alert('task successfully saved^^');
-			</script>
-			<?
+			header('location:daftarartikel.php?message=successdraft');
 		}
 	}
 	}

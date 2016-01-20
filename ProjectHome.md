@@ -1,0 +1,1 @@
+System Information Cooperation Ranch (SI CO-RANCH) menawarkan solusi utama permasalahan untuk koperasi peternakan. Sebuah fasilitas pemanfaatan teknologi informasi untuk mengatasi setiap permasalahan koperasi, terutama disektor peternakan yang meliputi peningkatan manajemen koperasi, optimalisasi pemasaran, penghimpunan permodalan dan pemetaan pasar.
